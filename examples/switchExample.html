@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+
+        /*
+            Given a score from 0-50 we are going to provide feedback using the following
+            0-20    remediation required
+            21-30   Limited success
+            31-40   Solid success
+            41-45   Excellent success
+            46-50   Outstanding success
+
+        */
+
+        /*  Test Plan 
+
+         Input           Expected Value          Actual Value
+        0               "Remediation"
+        5               "Remediation"
+        20              "Remediation"
+        21              "Limited"
+        25              "Limited"
+        30              "Limited"
+        31              "Solid"
+        35              "Solid"
+        40              "Solid"
+        41              "Excellent"
+        42              "Excellent"
+        45              "Excellent"
+        46              "Outstanding"
+        48              "Outstanding"
+        50              "Outstanding"
+        -1              "Input values must be between 0 and 50"
+        51              "Input values must be between 0 and 50"
+        20.7 
+        20.3
+        4F                       
+
+        */
+
+        //a series of if statements, one per situation/comparison
+        let score = 30;
+
+        if(score<=20){
+            console.log("Remediation required");
+        }
+        if(score >20 && score <=30){
+           console.log("Limited success"); 
+        }
+        if(score >30 && score <= 40){
+            console.log("Solid success");
+        }
+        if(score >40 && score <= 45){
+            console.log("Excellent success");
+        }
+        if(score>45){
+            console.log("Outstanding success");
+        }
+
+        //nest if structure
+        if(score<=20){
+            console.log("Remediation required");
+        }
+        else{
+            if(score >20 && score <=30){
+                console.log("Limited success"); 
+            }
+            else{
+                if(score >30 && score <= 40){
+                    console.log("Solid success");
+                }
+                else{
+                    if(score >40 && score <= 45){
+                        console.log("Excellent success");
+                    }
+                    else{
+                        console.log("Outstanding success");    
+                    }    
+                }    
+            }          
+        }
+
+
+
+
+
+
+
+    </script>
+</head>
+<body>
+    <h1>WDV221 Intro JavaScript</h1>
+    <h2>If Statements/Comparisons - Switch Statement</h2>
+</body>
+</html>

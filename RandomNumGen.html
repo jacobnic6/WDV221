@@ -1,0 +1,42 @@
+<!doctype html>
+<html>
+	<head>
+	
+		<title> Nicholas Jacobs Home Page </title>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="author" content="Nicholas Jacobs">
+		<meta name="description" content="Random number generator">
+		<meta name="keywords" content="Classes, WDV, Homework, Javascript">	
+		
+			<script>
+					function GenerateRandomNumber(){
+						let randomNum = Math.floor(Math.random() * 11);
+						console.log(randomNum);
+						document.getElementById("numberOut").innerHTML = randomNum;
+						return randomNum;
+					}
+						
+
+			</script>
+		
+	</head>
+
+	<body>
+		
+	
+		<header>
+
+			<h1>Nicholas Jacobs Random Number Generator</h1>
+
+		</header>
+		
+		<h3>Click the button to get your random number.</h3>
+		<button onClick="GenerateRandomNumber()">Click Me</button>
+		<p>Your random number: <div id="numberOut"></div></p>
+
+	</body>
+		
+	
+		
+	
+</html>

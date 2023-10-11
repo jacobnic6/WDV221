@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>functions</title>
+		<script>
+		
+		let schoolName = "DMACC";    // scope? Global scope - can be used anywhere,
+									// including inside of functions
+		
+		//Defining a function - creating a function
+	function outputSchoolName(){
+		// this function will output the School Name to the document object
+		//Where is the data coming from for this function? Where do we get the data we need?
+		//1. Global variable on the page
+		//2. pass the information into the function as a parameter
+		//3. get the information needed from the page or input process
+		document.write(schoolName);	// output the value to the document object
+		}
+			function displayMajor(){
+				let studentMajor = "WDV";
+				alert("Student Major: " + studentMajor + " School: " + schoolName);
+			}
+			displayMajor();
+			
+			
+		</script>
+</head>
+	
+<body>
+	<h1>WDV221 Intro JavaScript</h1>
+	<h2>Unit- 4 Functions</h2>
+	<p>Hello, your school is:
+		<script>
+		// to call a function:
+		// 1. use the function name in a script
+		//2. use an event handler to call the function
+	 outputSchoolName(); 	// this calls/ runs the function
+			//document.write() works as part of the run time scripts. As the page is being rendered
+			// If you use the document.write() AFTER the document object is fully loaded/rendered
+			// it will replace the old document with a new one
+		</script>
+		<script>
+			outputSchoolName();
+			outputSchoolName();
+			outputSchoolName();
+			outputSchoolName();
+			outputSchoolName();
+			//document.write(studentMajor); breaks trying to use a local scope variable
+		</script>
+	</p>
+			
+	<p>		
+		<button onclick="outputSchoolName();">Display School</button>
+	</p>
+	<p>		
+		<button onclick="displayMajor();">Display Major</button>
+	</p>
+</body>
+</html>

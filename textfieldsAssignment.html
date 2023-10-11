@@ -1,0 +1,116 @@
+<!doctype html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>WDV221 Intro Javascript - Operators and Textfields Assignment</title>
+
+<style>
+
+body {background-color:#C99;
+}
+
+.highlightTitle	{
+	font-family:"Trebuchet MS", Arial, Helvetica, sans-serif;
+	font-style:italic;
+	font-size:14px;
+	text-decoration:underline;
+	color:#096;
+}
+
+
+</style>
+
+
+<script>
+	
+	
+	
+	 	function getUserInput(paramIn, paramOut){ 	// takes the values inputted as parameters and returns them in the  boxes at 1 and 2
+				let input = document.getElementById(paramIn).value;
+				document.getElementById(paramOut).value = input;
+				console.log(input);
+				}
+	
+		function multiplyUserInput(val1, val2){		// takes the input values and returns the product of them at 3
+			let convertedNum1 = document.getElementById(val1).value;
+			let convertedNum2 = document.getElementById(val2).value;
+			let numProduct = convertedNum1 * convertedNum2;
+			document.getElementById("inputMultipy").value = numProduct;	
+		}
+	
+		function addUserInput(val1, val2){		// takes the input values and returns the sum of them at 4
+			let convertedNum1 = document.getElementById(val1).value;
+			let convertedNum2 = document.getElementById(val2).value;
+			let numSum = parseInt(convertedNum1) + parseInt(convertedNum2);
+			document.getElementById("inputAdd").value = numSum;	
+		}
+	
+		function incrementCount(val1){		// makes a counter in the box at 5 and each time you click the button it increments by 1
+			 let count = ++document.getElementById(val1).value;
+			return count;
+		}
+
+</script>
+
+
+</head>
+
+<body>
+<h2>WDV221 Intro Javascript</h2>
+<h3>Project 3 - Operators and Textfields - Assignment</h3>
+<hr />
+<p>Please complete the following exercises on this page. When complete post this page to your  server. Make a link in your WDV221 homework  page for this assignment. </p>
+<p>Include a comment in each script with the exercise number and a description of what the script is supposed to do.</p>
+<p>Using Blackboard submit this  Assignment.</p>
+<hr />
+<h3>Instructions</h3>
+<p>Use the form fields for the input values. For each of the following exercises create a function what will be activated by the button.  </p>
+	
+<form name="form1" method="post" action="">
+	
+  <p><label for="input1"> Enter a number for value1:</label>
+    <input type="text" id="input1" name="input1" value="" placeholder="write a number"/>
+  </p>
+	
+  <p><label for="input2">Enter a number for value 2:</label>
+    <input type="text" id="input2" name="input2" value="" placeholder="write a number"/>
+  </p>
+	
+  <p>1.
+    <input type="button" name="button1" id="button1" value="Display value1" onClick="getUserInput('input1', 'output1')" />
+	  
+   <label for="output1"> Display the value you entered for value1:</label>
+  <input type="text" id="output1" name="output1" value="" placeholder="number 1"/>
+  </p>
+	
+  <p>2.
+    <input type="button" name="button2" id="button2"  value="Display value2" onClick="getUserInput('input2', 'output2')"/>
+   <label for="output2"> Dislplay the value you entered for value2:</label>
+  <input type="text" id="output2" name="output2" value="" placeholder="number 2"/>
+  </p>
+	
+  <p>3.
+    <input type="button" name="button3" id="button3" value="Multiply" onClick="multiplyUserInput('output1', 'output2')" />
+    <label for="inputMultiply">Display the value of value1 * value2:</label>
+  <input type="text" id="inputMultipy" name="inputMultiply" value="" placeholder="number 1 * number 2"/>
+  </p>
+	
+  <p>4.
+    <input type="button" name="button4" id="button4" value="Add" onClick="addUserInput('output1', 'output2')" />
+   <label for="inputAdd"> Display the results of value1 + value2 in the following textfield.</label>
+  <input type="text" id="inputAdd" name="inputAdd" value="" placeholder="number 1 + number 2"/>
+  </p>
+	
+  <p>5.
+    <input type="button" name="button5" id="button5" value="Increment count" onClick="incrementCount('inputIncrement')" />
+    <label for="inputIncrement">Use the increment operator to add 1 to count and display the new value of count.</label>
+  <input type="text" id="inputIncrement" name="inputIncrement" value="0" placeholder="count value..."/>
+  </p>
+	
+  <p>
+    <input type="reset" name="Reset" id="button" value="Reset">
+  </p>
+</form>
+<p>&nbsp;</p>
+</body>
+</html>

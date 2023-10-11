@@ -1,0 +1,59 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>WDV221 Intro Javascript</title>
+
+
+<script>
+     
+	 function processFullName(inFirstName, inLastName)
+     {
+          var fullName = inFirstName + " " + inLastName;
+          return fullName;
+     }
+	 
+	 
+	function displayFullName()
+	{
+     	alert("Your full name is " + processFullName("Mary","Smith") );  //The function will return the processed value to the alert( )
+	}	 
+	
+</script>
+
+
+<script>
+
+     var newName = processFullName("Mark","Leaver");  //The function will return the process value to be stored in the global variable
+
+	function displayName(inName)
+	{
+		alert(inName);	//this function will display whatever name is passed into it	
+	}
+
+
+</script>
+
+</head>
+
+<body>
+<h1>WDV221 Intro Javascript</h1>
+<h2>Unit-4 Functions with Parameters - Code Example</h2>
+<p>You have been using functions that require or expect a parameter. Another way to say is that you already know how to call functions and pass a value to that function.</p>
+<p>For example:</p>
+<p><strong>alert(&quot;Hello Class!&quot;);</strong> The string &quot;Hello Class!&quot; is the value you passed to the alert( ) function to display.</p>
+<p><strong>prompt(&quot;Please enter your email address:&quot;, &quot;name@server.edu&quot;);</strong> This function can accept one or two parameters depending upon how you wish to use it.</p>
+<p><strong>document.write(&quot;&lt;h1&gt;Hello Class&lt;/h1&gt;&quot;); </strong>The string &quot;&lt;h1&gt;Hello Class&lt;/h1&gt;&quot; is a value being passed to the write( ) of the document object in order to place it on the document object.</p>
+<p>&nbsp;</p>
+<p>
+	<button onClick="displayFullName()">Display Full Name</button>
+</p>
+<p>
+	<button onClick="displayName(newName)">Display the newName variable</button>
+</p>
+<p>
+	<button onClick="displayName('Student 42')">Display a passed value</button>
+    <!-- Note: the single quotes inside of double quotes. Strings must be quoted. -->
+</p>
+</body>
+</html>

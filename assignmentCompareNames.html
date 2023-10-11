@@ -1,0 +1,78 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>WDV221 Intro Javascript</title>
+	<script>
+		 /*compareNames()
+		 - needs to get the two input values from the form
+		  -   compare them case insensitive
+			print results as same or different
+          	boolean comparison if true print same if false print dif
+			- use span element and .innerHTML to display results
+			-make reset function*/
+		
+		function compareNames() //1. compareNames()
+				{
+					console.log(document.querySelector("#value1").value);
+					let nameOne = document.querySelector("#value1").value;
+					console.log(document.querySelector("#value2").value);		// 2. needs to get the two input values from the form
+					let nameTwo = document.querySelector("#value2").value;
+					let nameOneFormatted = nameOne.toLowerCase();				// 3.  compare them case insensitive
+					let nameTwoFormatted = nameTwo.toLowerCase();
+					let resultOut = document.querySelector("#result").value
+					if (nameOneFormatted === nameTwoFormatted){
+						document.querySelector("#result").innerHTML = ("Same");		//4. print results as same or different
+																					//5. .innerHTML property to display
+					}
+					else {
+						document.querySelector("#result").innerHTML = ("Different");
+					}
+					
+				}
+		
+		function resetNames(){
+			document.querySelector("#result").innerHTML = ""		//6. reset function with .innerHTML to reset the result that printed to the page
+																		// and .value to reset the form values
+			document.querySelector("#value1").value = ""
+			document.querySelector("#value2").value = ""
+			//console.log(reset);
+		}
+	
+	</script>
+	
+</head>
+
+<body>
+<h2>WDV221 Intro Javascript</h2>
+<h3>Comparison and IF Statements - Compare Names Assignment </h3>
+<hr />
+<p>Please complete the following exercises on this page. When complete post this page to your  server. Make a link in your WDV221 homework  page for this assignment. </p>
+<p>Include a comment in each script with the exercise number and a description of what the script is supposed to do.</p>
+<p>Using Blackboard submit this  Assignment.</p>
+<hr />
+<form id="form1" name="form1" method="post" action="#">
+  <p><label for="value1">Name 1: </label> 
+    <input type="text" name="value1" id="value1" />
+  </p>
+  <p><label for="value2">Name 2:</label>
+    <input type="text" name="value2" id="value2" />
+  </p>			
+  <p>Result: <span id="result"></span> </p>			<!--5. span element-->		
+  <p><input type="button" value="Compare Names" onClick="compareNames()" />
+  </p>
+  <p>
+    <input type="button" name="Reset" id="button" value="Reset" onClick="resetNames()" />
+  </p>
+</form>
+
+<h3>Instructions:</h3>
+<ol>
+  <li>Create a function called compareNames( ).</li>
+  <li>The function will compare the two input values from the form above.</li>
+  <li>The comparison should be case insensitive.</li>
+  <li>The results should display &quot;Same&quot; or &quot;Different&quot;.</li>
+  <li>Use a span element and its .innerHTML property to display the results.</li>
+  <li>Provide a reset function that will reset the form and results.</li></ol>
+</body>
+</html>

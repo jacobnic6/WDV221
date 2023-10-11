@@ -1,0 +1,80 @@
+<html>
+
+	<head>
+		<title>WDV221 Intro Javascript</title>
+		<script src="productArrays.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+		<script>
+			/*			
+			Product objects have the following properties and methods
+				prod_name
+				prod_number
+				prod_manufacture_price
+				prod_suggestedRetailPrice( )	
+					this function will create the suggest retail price of the object
+					to calculate take manufacture_price times 1.67
+			*/
+			var productObject = {productNames, productNumbers, productManPrices};
+			
+			$(document).ready(function(){
+				var productObject = {productNames, productNumbers, productManPrices};
+				$(":contains(?)").append(productObject.productNames.length);
+		});
+			
+			$(document).ready(function(){
+        var productObject = {productNames, productNumbers, productManPrices};
+        $.each(productObject, function(index, value){
+            $(":contains(?)").append(index + ": " + value + '<br>');
+        });
+    });
+		</script>
+	
+    
+	</head>
+	
+	<body>
+		<h1>WDV221 Intro Javascript</h1>
+		<h2>Skill Test - Create and Display Javascript Objects</h2>
+		
+		<h2>Product Inventory List</h2>
+		<div>
+			<h3>EXAMPLE OUTPUT</h3>
+			<p>Number of Products in Product List: 1</p>
+			<p>
+				Product: Standard Keyboard</br>
+				Product Number: std-key<br>
+				Product Wholesale Price: $11.90</br>
+				Product Suggested Retail Price: $19.87</br>
+			</p>
+
+			
+			<h3>PROJECT OUTPUT</h3>
+			<p>Number of Products in Product List ?</p>
+		
+		
+		</div>
+		<h3>Instructions</h3>
+		<ol>
+			<li>Attach the external script file as the source for your data</li>
+			<li>Use the properties/methods defined in the comments to create a Product object</li>
+			<li>Using the data provided in the external script file create an array of Product objects called productList </li>
+			<li>Display the number of objects in the productList array on the page as indicated</li>
+			<li>Use a loop to display the contents of the productList on the page beginning after the PRODUCT OUTPUT</li>
+			<li>The output of the array should follow the same pattern as the example output</li>
+			<li>All prices should be displayed as USD formatted currency</li>
+		</ol>
+	</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+

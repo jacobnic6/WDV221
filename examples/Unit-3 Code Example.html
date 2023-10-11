@@ -1,0 +1,51 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>WDV221 Intro Javascript - Unit-3 Functions</title>
+
+<script>
+
+	var message = "We are working with functions!";	//global variable, available to the whole page
+	
+	function printGreeting()
+	{
+		document.write("<h3>" + message + "</h3>" );	
+	}
+
+
+	function displayMessage()
+	{
+		alert(message);	//display the value of the message variable	
+	}
+
+</script>
+
+
+</head>
+
+<body>
+<h1>WDV221 Intro Javascript</h1>
+<h2>Unit-3 Functions - Code Example</h2>
+
+<script>
+
+	printGreeting();	//runtime call to the function. It will do its works at this point
+
+</script>
+
+<p>This example includes:</p>
+<ol>
+  <li>A global variable</li>
+  <li>A Javascript function that will be called during runtime to create an h3 element</li>
+  <li>An HTML event handler on a button</li>
+  <li>The button will call a Javascript function to display the value of the global variable</li>
+</ol>
+<p>
+
+	<button onClick="displayMessage()">Display Message</button>
+    	<!-- NOTE: the use of the onClick attribute within the button element. This listens for a click of the button -->
+
+</p>
+</body>
+</html>

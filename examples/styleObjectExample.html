@@ -1,0 +1,70 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>WDV221 Intro Javascript</title>
+
+<script>
+
+	function changeBackgroundColor(inColor){
+		//alert("inside changeBackgroundColor()");
+		
+		document.getElementById("mainBody").style.backgroundColor = inColor;
+	}//end changeBackgroundColor()
+  
+  
+  	function changeFont() {
+		//alert("inside changeFont()");
+		
+		var fontSelector = document.getElementById("chooseFont");
+		
+		var newFont = fontSelector.options[fontSelector.selectedIndex].text;
+		
+		document.getElementById("mainBody").style.fontFamily = newFont;
+	}//end changeFont()
+  
+  
+  </script>
+  
+
+
+</head>
+
+<body id="mainBody">
+<p>WDV221 Intro Javascript</p>
+<p>Using the Style Object to dynamically change CSS</p>
+<form method="post" action="#">
+  <fieldset>
+      <legend>Choose a background color</legend>
+      <p>
+        <label>Red
+            <input type="radio" name="backgroundColorChoice" value="red" onchange="changeBackgroundColor('red')"/>
+        </label>
+      </p>
+      <p>
+        <label>Green
+            <input type="radio" name="backgroundColorChoice" value="green" onchange="changeBackgroundColor('green')"/>
+        </label>
+      </p>
+      <p>
+        <label>Blue
+            <input type="radio" name="backgroundColorChoice" value="blue" onchange="changeBackgroundColor('blue')"/>
+        </label>
+      </p>
+  </fieldset>
+  
+  <fieldset>
+      <legend>Select a Font</legend>
+      <select id="chooseFont" onchange="changeFont()" >
+        <option value="" selected >Times New Roman</option>
+        <option value="">Comic Sans MS</option>
+        <option value="">Helvetica</option>  
+      </select>
+  </fieldset>
+  
+  
+  
+</form>
+<p>&nbsp;</p>
+</body>
+</html>

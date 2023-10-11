@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>variablesUnit2</title>
+</head>
+
+<body>
+	<h1>WDV 221 Intro JavaScript</h1>
+	<h2>Unit-2 Variables and data types</h2>
+	<script>
+		let firstName;  // defines a variable
+						// scope: global you can use it and see it anywhere on the page
+						// 			including within a function
+		console.log(firstName);
+		
+		let lastName = "Smith"; //define a variable, assign it a value, data type? String
+		
+		firstName = "Mary";		// assign a value, data type? String
+	</script>
+	
+	<p> The value of firstName is <script>document.write(firstName);</script></p>
+	<p> The value of lastName is <script>document.write(lastName);</script></p>
+	<script>
+	//let firstName = "Jeff"; define a new variable
+		firstName = "Jeff"; // change the value of the variable
+	
+	</script>
+	
+	<p>2. The value of firstName is <script>document.write(firstName);</script></p>
+	<p>2.  The value of lastName is <script>document.write(lastName);</script></p>
+	<script>
+		firstName = 42; 		// assign a new value, data type? number
+
+	</script>
+	<p>3. The value of firstName is <script>document.write(firstName);</script></p>
+	<p>3.  The value of lastName is <script>document.write(lastName);</script></p>
+	<script>
+		firstName = "42"; // data type? String because of the quotes
+		// ' ' or " " create a String data type, string literal- exactly as written
+	</script>
+	<p>4. The value of firstName is <script>document.write(firstName);</script></p>
+	<p>4.  The value of lastName is <script>document.write(lastName);</script></p>
+	<p>5. The value of firstName is <script>document.write("firstName");</script></p>
+	<p>5.  The value of lastName is <script>document.write("lastName");</script></p>
+	<script>
+		// boolean has two values. boolean true and boolean false
+		
+		// boolean variable is a yes/no condition/question/flag/switch
+		
+		let validForm = true; 		// boolean variable, boolean data type
+	</script>
+	
+	<p> Is the form finished? <script>document.write(validForm);</script></p>
+	<script>
+		validForm = 'true';  	// data type? String 
+		console.log(validForm);
+	</script>
+	<script>
+		// const - defines a variable with a CONSTANT value, cannot change the value
+		// 			often written in all UPPERCASE
+		
+		const SCHOOLNAME = "DMACC";
+		console.log(SCHOOLNAME);
+		
+		// var is old school, still in heavy use in applications
+		// most similar to let. Has some real different characteristics
+	
+	</script>
+	<p>School Name: <script>document.write(SCHOOLNAME);</script></p>
+</body>
+</html>

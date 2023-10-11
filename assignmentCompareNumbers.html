@@ -1,0 +1,87 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>WDV221 Intro Javascript</title>
+	<!--1.Create function compareNumbers()
+2.The function will compare two numbers entered in the form above.
+        need to get the two inputs from the form using .querySelector
+ 3.        compare the values to each other and display largest or equal
+4.  display results using span and .innerHTML
+5. reset function for the form
+      .querySelector().value to reset values to ""-->
+	<script>
+		function compareNumbers(){			//1.Create function compareNumbers()
+			console.log(document.querySelector("#value1").value);		/*2.The function will compare two numbers entered in the form above.
+        																need to get the two inputs from the form using .querySelector*/
+			let numOne = document.querySelector("#value1").value;
+			console.log(document.querySelector("#value2").value);
+			let numTwo = document.querySelector("#value2").value;
+			
+			if (parseInt(numOne) === parseInt(numTwo)){			 //3. compare the values to each other and display largest or equal
+				document.querySelector("#result").innerHTML = " Equal";
+				
+				} else if (parseInt(numTwo) > parseInt(numOne)){
+					document.querySelector("#result").innerHTML = " " + numTwo;
+						} else{
+							if (isNaN(numOne) || isNaN(numTwo)){         //handles wrong format
+								document.querySelector("#result").innerHTML = " Please make sure your entries are in numeric format.";
+							}
+							else {
+								document.querySelector("#result").innerHTML = " " + numOne;       //4.  display results using span and .innerHTML
+							}
+
+			}
+			
+		}
+		
+		function resetNumbers(){
+			document.querySelector("#result").innerHTML = "";		
+																		/*5. reset function for the form .querySelector().value to reset values to*/
+			document.querySelector("#value1").value = "";
+			document.querySelector("#value2").value = "";
+			
+		}
+		
+	
+	</script>
+	
+	
+	
+</head>
+
+<body>
+<h2>WDV221 Intro Javascript</h2>
+<h3>Comparisons and IF Statements - Compare Numbers Assignment </h3>
+<hr />
+<p>Please complete the following exercises on this page. When complete post this page to your  server. Make a link in your WDV221 homework  page for this assignment. </p>
+<p>Include a comment in each script with the exercise number and a description of what the script is supposed to do.</p>
+<p>Using Blackboard submit this  Assignment.</p>
+<hr />
+<form id="form1" name="form1" method="post" action="">
+  <p><label for="value1">Value 1: </label>
+    <input type="text" name="value1" id="value1" />
+  </p>
+  <p><label for="value2">Value 2: </label>
+    <input type="text" name="value2" id="value2" />
+  </p>
+  <p><label for="result">Result:<span id="result"></span>  </label> </p> <!--//4.  display results using span and .innerHTML-->
+  <p>
+    <input type="button" onClick="compareNumbers()" value="Compare Numbers" />
+  </p>
+  <p>
+    <input type="reset" name="Reset" id="button" onClick="resetNumbers()" value="Reset" />
+  </p>
+</form>
+
+<p>Instructions:</p>
+<ol>
+  <li>Create a function called compareNumbers( ).</li>
+  <li>The function will compare two numbers entered in the form above. </li>
+  <li>The function should display the largest number or &quot;Equal&quot; if both values are the same.</li>
+  <li>The results will be displayed in a span element using the .innerHTML property.</li>
+  <li>Provide a reset function that will properly clear the form between attempts.</li>
+</ol>
+</body>
+</html>
+

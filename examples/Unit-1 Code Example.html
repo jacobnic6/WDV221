@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>WDV221 Intro Javascript</title>
+
+	<style>
+
+	div#container	{
+		width:960px;
+		margin:auto;
+		padding:10px;
+		background-color:white;	
+		border:thin solid black;
+	}
+
+
+	</style>
+
+	<script>
+		//This is an example of a runtime script.  It will be processed BEFORE the rest of the page is loaded.
+		console.log("Hello Class! This is your Browser Console speaking to you.");	//this will display in the console.  use F12 to view it
+
+		function studentAlert() {
+			alert("Hello Class! Welcome to Javascript");	//this will display a message in a popup box
+		}
+
+	</script>
+
+</head>
+
+<body>
+	<div id="container">
+
+		<h1>WDV221 Intro Javascript</h1>
+		<h2>Introduction to Javascript Syntax</h2>
+		<h3>Unit-1 Code Example</h3>
+		<script>
+			document.write( "<h3>Javascript was used to place this H3 element on the document object. This is a runtime script that was processed as the browser built the document object (web page) that you see in your browser.</h3>");
+		</script>
+		<p>Hello <strong><script>document.write("Jeff"); </script>!</strong> Javascript was used to place my name within this line.</p>
+		<p>Javascript can be used to manipulate any type of HTML content or CSS presentations. </p>
+		<p>Can you tell by looking which of the following list elements was created with HTML versus Javascript?</p>
+		<p>Key features of Javascript:</p>
+		<ul>
+		  <li><script>document.write("It is a client side scripting language");</script></li>
+		  <li>It is object oriented - that means it uses objects and properties within the document object</li>
+		  <li>Works within the browser also known as the &quot;document object&quot;</li>
+		  <script>document.write("<li>IT IS CASE SENSITIVE!!!</li>");</script>
+		</ul>
+		
+		<p>
+			Press the button to activate an alert. <button onclick="studentAlert()">Student Alert!</button> When you click on the button you activate the onclick event. Javascript is 'listening' for an onclick event to occur.  When it does it calls a function to display the alert message. 
+			
+		
+		</p>
+		<p>A runtime script was used to place the 'textfield' in the following form. </p>
+		<form id="form1" name="form1" method="post" action="#">
+		  <p>
+			<label for="firstName">First Name:
+				<script>
+					document.write( "<input type='text' id='firstName'>" );
+				</script>
+			</label>
+		  </p>
+		  <p>
+			<input type="submit" name="button" id="button" value="Submit">
+			<input type="reset" name="button2" id="button2" value="Reset">
+		  </p>
+		</form>
+		<p>&nbsp;</p>
+	</div>
+
+</body>
+</html>

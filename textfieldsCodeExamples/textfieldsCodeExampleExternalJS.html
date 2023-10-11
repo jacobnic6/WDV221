@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>WDV221 Intro Javascript</title>
+
+<script src="addNumbers.js"></script>
+
+</head>
+
+<body>
+<h1>WDV221 Intro Javascript </h1>
+<h3>Operators and Textfields - Code Example</h3>
+<p>&nbsp;</p>
+<h3>Two Runtime examples using a function with two parameters.</h3>
+<p>Add 5 to 7. Display the results: <script> document.write( addTwoNumbers(5,7) ); </script></p>
+<p>Add two numbers and display the results: <script> document.write( addTwoNumbers("5.78",125) ); </script></p>
+<p>&nbsp;</p>
+<form id="form1" name="form1" method="post" action="">
+  <p> 
+    <label for="num1">Number 1:
+    	<input type="text" name="num1" id="num1" />
+    </label>
+  </p>
+  <p> 
+    <label for="num2">Number 2:
+    	<input type="text" name="num2" id="num2" />
+    </label>
+  </p>
+  <p>
+    <label for="displayTotal">Total:	
+    	<input type="text" name="displayTotal" id="displayTotal" />
+    </label>
+  </p>
+  <p>
+  	<!-- NOTE:  You must change the input type="submit" to type="button".  Type="submit" will attempt to process the form. -->
+    
+<p>1. Use the two numbers without converting them to numeric.  Remember any data from a form is ALWAYS treated as a string. 
+  <input type="button" name="button" id="button" value="Add Numbers Without Converting" onclick="addNumbersNoConvert()" /> 
+</p>
+
+<p>2. Use the two numbers from the form. This time the form will convert them to numeric values before processing.    
+  <input type="button" name="button" id="button" value="Add Numbers" onclick="addNumbers()" />
+</p>
+    
+<p>3. This option pulls the values from the form and sends them into another function to be processed.  The function returns the results of the process which is displayed on the form. 
+  <input type="button" name="button" id="button" value="Get Numbers" onclick="getNumbers()" /> 
+</p> 
+
+<p>4. Use the two numbers without converting them to numeric.  Remember any data from a form is ALWAYS treated as a string. 
+  <input type="button" name="button" id="button" value="Multiply Numbers Without Converting" onclick="multiplyNumbers()" /> 
+</p>
+<h3>Bonus points if you can explain why 1. and 4. work as they do. </h3>
+  
+    <input type="reset" name="button2" id="button2" value="Reset" />
+  </p>
+</form>
+</body>
+</html>

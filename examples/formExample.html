@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+
+        function getFormValues(){
+            alert("inside getFormValues()");
+            /*
+                Get all the values from the form fields
+                display their values in the console
+            */
+
+            //display the value entered in inName text field
+            let inputName = document.getElementById("inName").value; //get value of text field
+            console.log( inputName ); 
+            let inputAddress = document.getElementById("inAddress").value;
+            console.log( inputAddress );
+
+            //how do I know which radio button was selected?  How do I display its value?
+            console.log( document.querySelector('input[name="colors"]:checked').value    );
+
+            //document.getElementById("inName").value = "Got the name";
+        }
+
+
+
+    </script>
+</head>
+<body>
+    <h1>WDV221 Intro JavaScript</h1>
+    <h2>Form Handling</h2>
+    <p>Form Example using ADA Compliance techniques</p>
+
+    <section>
+        <form method="post" action="#">
+            <p>
+                <label for="inName">Name:</label>
+                <input type="text" name="inName" id="inName" value="Enter Name">                
+            </p>
+
+            <p>
+                <label>Address: 
+                    <input type="text" name="inAddress" id="inAddress" placeholder="Enter Address">
+                </label>                
+            </p>
+
+            <p>
+                <label for="colorRed">Red: </label>
+                <input type="radio" name="colors" id="colorRed" value="RGB(colorRed)">
+                <label for="colorBlue">Blue:</label>
+                <input type="radio" name="colors" id="colorBlue" value="RGB(colorBlue)">
+            </p>
+
+            <p>
+                <input type="button" value="Submit Form" name="Submit" id="Submit" onclick="getFormValues()">
+                <input type="reset">
+            </p>
+
+        </form>        
+    </section>
+
+</body>
+</html>

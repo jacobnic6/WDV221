@@ -1,0 +1,94 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>WDV221 Intro Javascript</title>
+
+<style>
+
+div#container	{
+	width:960px;
+	margin:auto;
+	padding:10px;
+	background-color:white;	
+	border:thin solid black;
+}
+0.
+
+.
+
+</style>
+
+	<script>
+		let userName = "Nicholas Jacobs";
+		let userMajor = "CIS";
+		
+		function displayName()
+			{
+				document.write(userName);
+			}
+			
+		function displayMajor()
+			{
+				document.write(userMajor);
+			}
+		function displayAndLogNameAndMajor(nameOfUser, majorOfUser)
+			{
+				console.log(nameOfUser + " " + majorOfUser);
+				document.write(nameOfUser + " " + majorOfUser);	
+			}
+		
+		function pageAlert(userMessage)
+		{
+			alert("You are on your way to working with Javascript!");
+		}
+		
+	</script>
+
+
+
+</head>
+
+<body>
+<div id="container">
+
+    <h1>WDV221 Intro Javascript</h1>
+
+    <script>
+      //B. Add a script within the following element to output your name in place of yourName
+    </script>
+    <h2><script> displayName(); </script></h2>
+
+    <h2>Introduction to Javascript</h2>
+
+	<h3>
+		<script>		
+			//A. Create a run time script to output an h3 element that says 'Assignment 1'
+			document.write("Assignment 1");
+    	</script>
+	</h3>
+    
+
+    
+	
+    <p>Tasks:</p>
+    <p>1. Check the instructions are in the code.</p>
+    <p>2. Create a run time script that will display your name and major on the page AND on the console log.</p>
+	<p><script>displayAndLogNameAndMajor("Nicholas Jacobs", "CIS")</script></p>
+    <p>3. Fix the run time script on the bottom of this page.</p>
+    
+    <p>
+		<script>
+			document.write("I wrote this with JavaScript!")
+      		//C. add a script that will output a p element to the page that says "I wrote this with JavaScript!"
+    	</script>
+	</p>
+
+    <script>
+		  pageAlert();
+	  </script>
+    
+</div>
+
+</body>
+</html>

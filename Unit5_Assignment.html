@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>WDV221 Intro Javascript - Event Handlers Assignment</title>
+
+<style>
+
+body {background-color:#FC6;
+}
+
+.highlightTitle	{
+	font-family:"Trebuchet MS", Arial, Helvetica, sans-serif;
+	font-style:italic;
+	font-size:14px;
+	text-decoration:underline;
+	color:#096;
+}
+
+
+</style>
+	<script>
+		function LoadFunction()
+		{
+			alert("The page is loaded");
+		}
+		
+		function DisplayMessage()
+		{
+			document.getElementById("message").innerHTML = "Great Job!";
+		}
+		
+		function MouseOver()
+		{
+			document.getElementById("hover").style.color = "red";
+		}
+		
+		function MouseOut()
+		{
+			document.getElementById("hover").style.color = "black";
+		}
+	
+		function ImgMouseOver()
+		{
+			document.getElementById("picture").style.height = "100px";
+			document.getElementById("picture").style.width = "100px";
+		}
+		function ImgMouseOut()
+		{
+			document.getElementById("picture").style.height = "50px";
+			document.getElementById("picture").style.width = "50px";
+		}
+		
+		function SeasonFunction()
+		{
+			let selectedSeason = document.getElementById("seasonSelect").value;
+			document.getElementById("selectionPrint").innerHTML = selectedSeason + " is a great season!";
+		}
+		
+	</script>
+	
+</head>
+
+<body onLoad="LoadFunction()">
+	
+<h2>WDV221 Intro Javascript</h2>
+<h3>Unit-5 - Event Handlers Assignment</h3>
+
+
+<button onClick="DisplayMessage()">Click me.</button>
+<p id="message"></p> 
+	
+<p id="hover" onMouseOver="MouseOver()" onMouseOut="MouseOut()"> Mouse over me!</p>
+	
+<img src="thumbs-up-40455_640.png" id="picture" alt="thumbs up"height = "50" width="50" onMouseOver="ImgMouseOver(this)"
+	 onMouseOut="ImgMouseOut()"></img>
+	
+<p>Select a favorite season</p>
+	
+	<select id="seasonSelect" onChange="SeasonFunction()">
+		<option value="Spring">Spring</option>
+		<option value="Summer">Summer</option>
+		<option value="Fall">Fall</option>
+		<option value="Winter">Winter</option>
+	</select>
+	
+	<p id="selectionPrint"></p>
+	
+	
+	
+
+
+	
+	
+	<script>
+		</script>
+</body>
+</html>

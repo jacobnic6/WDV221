@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>functionsParameters3</title>
+	<script>
+		
+		
+		//part 1. Define the function, assign parameter variable names
+		function formatNames(inFirstName, inLastName){		
+			//behind the scenes 	let inFirstName = "Mary" let inLastName = "Smith"
+			//alert("inside formatNames()");
+			
+			console.log(inFirstName, inLastName);		//display to the value passed into this function
+			console.log("inFirstName" + inFirstName);
+			console.log("inLastName" + inLastName);
+		}
+		
+		
+		// part 2. Call the function and pass an information as needed
+		formatNames(); 	//failed to send any parameters inFirstName, inLastName
+		formatNames("Mary", "Smith");	//pass the parameters
+		formatNames("", "Johnson");	// pass empty string for the first parameter. acts as placeholder
+									// this is better than saying it is undefined
+		formatNames("Mary","Smith");
+		
+		//change name of the parameter and call the function. Allows for re use
+		let studentFirstName = "Mark";
+		let studentLastName = "Brown";
+		
+		formatNames( studentFirstName, studentLastName);
+		
+		//what do we do with the results of a function?
+			//assign the results to a global variable to be used on the page
+			//display the result to an output 	.innerHTML on the page, write(), .log(), alert() 
+			//return the results to where the function was called, to be used in another process
+				//	this requires us to 'catch' the return value
+		
+		function returnFormattedName(inFirstName, inLastName){
+				//alert("inside returnFormattedName()");
+				let formattedName = inLastName + ", " + inFirstName;
+				console.log(formattedName);
+				//document.write(formattedName); // writes it to the body
+				return formattedName;
+		}
+		
+		//when hear/see/read 'return' - how to 'catch' a return value?
+		//1. assign it to a variable, so we use it later in the page
+		// 2. display the result out
+		// 3. pass the result into a function as a parameter
+			returnFormattedName("Mary","Smith"); 	//expect? Smith, Mary
+			console.log(returnFormattedName("Mary","Smith")); // catch? display or parameter
+			
+	</script>
+	
+</head>
+
+	<body>
+		<h1>WDV221 Intro JavaScript</h1>
+		<h2>Functions using parameters and returns</h2>
+		<p>Student List</p>
+		<p>1. <script> returnFormattedName("Mary","Smith");</script></p>	
+		<p>2. <script> returnFormattedName("Nick","Jacobs");</script></p>
+		<p>3. <script> returnFormattedName("Abe","Jones");</script></p>
+		<p>4. <script> returnFormattedName("Mark","Brown");</script></p>
+		<p>
+			<button onClick="console.log(returnFormattedName('Me','Again'))">Display Name</button>
+		</p>
+		<p>Student List - Return Value</p>
+		<p>1. <script> document.write(returnFormattedName("Mark","Brown"));</script></p>
+		<p>1. <script> document.write(returnFormattedName("Mary","Smith"));</script></p>	
+		<p>2. <script> document.write(returnFormattedName("Nick","Jacobs"));</script></p>
+		<p>3. <script> document.write(returnFormattedName("Abe","Jones"));</script></p>
+		<p>4. <script> returnFormattedName("Mark","Brown");</script></p>
+	</body>
+</html>

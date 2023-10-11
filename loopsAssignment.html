@@ -1,0 +1,88 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>WDV221 Intro Javascript - Loops</title>
+</head>
+
+<body>
+<h1>WDV221 Intro Javascript</h1>
+<h2>Project-5 Loops Assignment</h2>
+<hr />
+<p>Please complete the following exercises on this page. When complete post this page to your  server. Make a link in your WDV221 homework  page for this assignment. </p>
+<p>Include a comment in each script with the exercise number and a description of what the script is supposed to do.</p>
+<p>Using Blackboard submit this  Assignment.</p>
+<hr />
+<h3>Instructions: </h3>
+<p>Please complete the following exercises using Javascript loops as indicated.  Please place your code on this page. Use runtime scripts unless told otherwise. </p>
+<p>1. Create a WHILE loop that will print out the  numbers 0 to 4 each on a seperate line.</p>
+	<p id="problemOne"></p>			
+		<script>
+			let numOne = ""; //initialize variable for our output
+			let i = 0;	//	initialize variable that we will be using to count loops starting at zero
+			while(i <= 4){	//write argument i<=4 so it prints 0 through 4
+				numOne += "The number is " + i + "<br>"; // addition assignment concatenating the two values of our number and the explanation with a line break added aswell
+				i++; // increment i after the line has printed 
+			}
+			document.getElementById("problemOne").innerHTML = numOne; // write to our selected area
+		</script>
+	
+<p>2. Create a FOR loop that will print out the  numbers 4 to 0 each on a seperate line.</p>
+	<p id="problemTwo"></p>	
+		<script>
+			let numTwo = "";//initialize variable for our output
+			for (let b = 4; b >= 0; b--){	// initialize our number to 4, the number we want to print first, define the condition as to continue while greater or equal to 0, then decrement by 1
+				numTwo += "The number is " + b + "<br>"; // addition assignment concatenating the two values of our number and the explanation with a line break added aswell
+			}
+			document.getElementById("problemTwo").innerHTML = numTwo; // write to our selected area
+		</script>
+	
+	<p>3. Create a loop that will print 1 to 5 each in its own paragraph element.</p>
+	<p id="problemThree"></p>
+
+		<script>
+			let numThree = ""; //initialize variable for our output
+			for(let c = 1; c <= 5; c++){ // initialize our number to 1, the number we want to print first, define the condition as to continue while less than or equal to 0, then increment by 1
+				numThree += "<p>The number is " + c + "</p>"; // addition assignment concatenating the two values of our number and the explanation with its own paragraph element
+			}
+			document.getElementById("problemThree").innerHTML = numThree; // write to our selected area
+		</script>
+	
+<p>4. Create a loop that will print out the following numbers (5,10,15,20,25...) until one is greater than 40.</p>
+	<p id="problemFour"></p>
+	<script>
+		let numFour = "";//initialize variable for our output
+		let d = 5;			//initialize variable for our starting value
+		while(d <= 45){ // loop until a number is greater than 40. 45 is the next one in the sequence so we stop at 45
+			numFour += "The number is " + d + "<br>"; // addition assignment concatenating the two values of our number and the explanation with a line break
+			d += 5; // increment by 5
+		}
+		
+		document.getElementById("problemFour").innerHTML = numFour; // write to our selected area
+			
+	</script>
+<p>5. Create a loop that will print out  6 of the following messages (Option 1, Option 2, Option 3, etc. ) as options within the drop down menu below.</p>
+	<script>
+		function getOption(){ //create function to call so we can create the options
+		let getSelect = document.getElementById("select"); // get our select element
+		let optionCounter = 1; // counter to track the values of the options
+		while(getSelect.length<6){	// do this until 6 values (starts at 0)
+			let createOption = document.createElement("option"); //create an option element
+		
+			createOption.text = "Option " + optionCounter;// set the text for the option value
+			getSelect.options.add(createOption);	//add the option element to the select element 
+			optionCounter++; 	// increment the counter so the values print correctly
+		}
+		}
+
+	</script>
+<p>
+  <label>Select an Option! 
+    <select name="select" id="select" onClick="getOption();">
+		
+    </select>
+  </label>
+</p>
+<p>&nbsp;</p>
+</body>
+</html>

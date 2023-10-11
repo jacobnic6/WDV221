@@ -1,0 +1,153 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>WDV221 Style Object-CSS Interactions In Class Exercises</title>
+<style type="text/css">
+<!--
+.style1 {color: #FF0000}
+-->
+</style>
+	<script>
+		function ChangeFontColor()
+		{
+			let paraToColor = document.getElementById("para1");
+				let color = paraToColor.style.color;
+				if (color == "black")
+					{
+						paraToColor.style.color = 'red';
+					}
+				else
+					{
+						paraToColor.style.color = 'black';
+					}
+		}
+		
+		function CenterH3Element()
+		{
+			document.getElementById("h3").style.textAlign = 'center';
+		}
+		
+		function LeftAlignH3()
+		{
+			document.getElementById("h3").style.textAlign = 'left';
+		}
+		
+		function ChangeFont()
+		{
+			document.getElementById("para4").style.fontFamily = 'Brush Script MT';
+		}
+		
+		function FontToDefault()
+		{
+			document.getElementById("para4").style.fontFamily = 'revert'
+		}
+		
+		function FontTo24()
+		{
+			document.getElementById("sale").style.fontSize = '24px';
+		}
+		
+		function FontToDefault2()
+		{
+			document.getElementById("sale").style.fontSize = 'revert';
+		}
+		
+		function BackgroundToYellow()
+		{
+			document.getElementById("para8").style.backgroundColor = 'yellow';
+		}
+		
+		function HideFrog()
+		{
+			document.getElementById("frogImg").style.display = 'none';
+		}
+		
+		function ShowFrog()
+		{
+			document.getElementById("frogImg").style.display = 'revert';
+		}
+		
+		function FrogDoubleSize()
+		{
+			let frog = document.getElementById("frogImg");
+			frog.style.height='200px';
+			frog.style.width='200px';
+				
+		}
+		
+		function FrogToOriginal()
+		{
+			let frog = document.getElementById("frogImg");
+				frog.style.height='100px';
+				frog.style.width='100px';
+		}
+		
+		function InsertBorder()
+		{
+			document.getElementById("para13").style.border = 'thick solid red';
+		}
+		
+		function RemoveBorder()
+		{
+			document.getElementById("para13").style.border = 'none';
+		}
+		
+		function BackgroundGreen()
+		{
+			document.getElementById("para15").style.backgroundColor = 'green';
+	
+		}
+		
+		function BackgroundWhite()
+		{
+			document.getElementById("para15").style.backgroundColor = 'white';
+		}
+		
+		
+		
+	</script>
+	
+</head>
+
+<body>
+<h1>WDV221 Intro Javascript</h1>
+<h3 id = "h3">Style Object - CSS Interactions - In Class Exercises</h3>
+<p>Please modify this page to create the following Dynamic HMTL effects. </p>
+<p id= "para1" onClick="ChangeFontColor()">1. Click this paragraph to change the font color to red.</p>
+<p onMouseOver="CenterH3Element()">2. Mousever this paragraph to center the H3 element containing &quot;CSS Interactions&quot;.</p>
+<p>3. Click the button to left align the H3 element. </p>
+<p>
+  <label>
+  <input onClick="LeftAlignH3()" type="submit" name="button" id="button" value="Submit" />
+  </label>
+</p>
+		<p id ="para4" onMouseOver="ChangeFont()" onClick="FontToDefault()">4. Mouseover this paragraph to change the font to a font of you choice. 5. Click on this paragraph to return the font to the default font.</p>
+<p>6. Click on the button to make the word <span id = "sale">SALE</span> font size 24. </p>
+<p>
+  <label>
+  		<input onClick="FontTo24()" type="submit" name="button2" id="button2" value="Submit" />
+  </label>
+</p>
+<p>7. Click on the button to return the word to its original size.</p>
+<p>
+  <label>
+    <input onClick="FontToDefault2()" type="submit" name="button3" id="button3" value="Submit" />
+  </label>
+</p>
+<p id="para8" onMouseOver="BackgroundToYellow()">8. Use an eventhandler of your choice on this paragraph to make the paragraph background color yellow. </p>
+<p onClick="HideFrog()">9. Use an onclick event to hide the Frog image shown below.</p>
+<p>10. Use the following button to make the Frog image shown below reappear.</p>
+<p>
+  <input onClick="ShowFrog()" type="submit" name="button4" id="button4" value="Submit" />
+</p>
+<p>11. Mouseover the Frong image to make its height and width double its original size. </p>
+<p><img on onClick="FrogToOriginal()"onMouseOver="FrogDoubleSize()" id="frogImg" src="frog.jpg" width="100" height="100" /></p>
+<p>12. Use a click event on the Frog image to make it return to original size. </p>
+<p id="para13" onDblClick="InsertBorder()">13. Doubleclick on this paragraph to place a border around this paragraph.</p>
+<p onClick="RemoveBorder()">14. Use an event handler of your choice to remove the border from the previous paragraph. </p>
+<p id="para15" onMouseOver="BackgroundGreen()" onMouseOut="BackgroundWhite()">15. Mouseover this paragraph to turn its background color to green. When you mouseoff the paragraph return it to its normal color. </p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+</body>
+</html>

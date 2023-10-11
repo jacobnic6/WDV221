@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+        /*
+            -when I click the Compare Number button - onclick event handler to call a function compareNumber()
+            -I want to get the number entered in the text field - document.querySelector("#inputNumber").value
+            see if that is a number, 
+            0if it display "Number" in the results, else display "Not a Number"
+
+            if( isNaN(inputNumber)){
+                true- NOT A NUMBER
+            }
+            else{
+                false - IT IS A NUMBER
+            }
+
+
+        */
+
+        function validateNumber(){
+            //alert("inside compareNumber()");
+            console.log( document.querySelector("#inputNumber").value );
+            let inputNumber = document.querySelector("#inputNumber").value;     
+            if( isNaN(inputNumber)){
+                //true- NOT A NUMBER
+                console.log ("NOT A NUMBER " + inputNumber);
+                document.querySelector("#results").innerHTML = "Not a Number";
+            }
+            else{
+                //false - IT IS A NUMBER
+                console.log("IT IS A NUMBER " + inputNumber);
+                document.querySelector("#results").innerHTML = "Number";
+            }
+            if( inputNumber.trim() == ""){
+                //invalid number 
+                //alert("inputNumber = space");
+                document.querySelector("#results").innerHTML = "Not a Number";
+            }
+        }
+
+        function clearResults(){
+            document.querySelector("#results").innerHTML = "";
+        }
+
+        /*
+            Based on order size:
+            <0  "Must have at least item in the order"
+            >0 <10  "Small Order"
+            >10 <20 "Medium Order"
+            >20     "large Order"
+        */
+
+        function displayOrderSize(){
+            //alert("inside displayOrderSize()");
+            let inOrderSize = document.querySelector("#orderSize").value;
+            console.log(inOrderSize);
+
+            if(inOrderSize <= 0){
+                document.querySelector("#orderResult").innerHTML = "Must have at least one item in the order.";
+            }
+        }
+
+    </script>
+</head>
+<body>
+    <h1>WDv221 Intro JavaScript</h1>
+    <h2>Unit-9 Comparisons - If Statements</h2>
+    <form method="post" action="#">
+        <div>
+            <label for="inputNumber">Input a number: </label>
+            <input type="text" name="inputNumber" id="inputNumber">
+        </div>
+        <div>
+            <input type="button" value="Compare Number" onclick="validateNumber()">
+            <input type="reset" value="Try Again" onclick="clearResults()">
+        </div>
+    </form>
+    <p>
+        Result: <span id="results"></span>
+    </p>
+
+    <h3>Compare a range of numbers</h3>
+        <p>
+            <label for="orderSize">How many in the order: </label>
+            <input type="text" name="orderSize" id="orderSize">
+        </p>
+        <p>
+            <button onclick="displayOrderSize()">Check Order Size</button>
+            <button onclick="">Clear Order</button>
+        </p>
+        <p>
+            Order Size: <span id="orderResult"></span>
+        </p>
+</body>
+</html>
